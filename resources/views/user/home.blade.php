@@ -12,7 +12,7 @@
     <title>Minggo.id</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="/template/img/core-img/favicon.ico">
+   <link rel="icon" href="/template/img/core-img/favicon.ico">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/template/style.css">
@@ -38,7 +38,7 @@
                 <div class="col-12 d-flex align-items-center justify-content-between">
                     <!-- Logo Area -->
                     <div class="logo">
-                        <a href="{{route('home')}}"><img src="/template/img/core-img/logo.png" alt=""></a>
+                        <!--<a href="{{route('home')}}"><img src="/template/img/core-img/logo.png" alt=""></a>--!>
                     </div>
                 </div>
             </div>
