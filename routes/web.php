@@ -29,7 +29,7 @@ Route::get('/administratordashboard/topup/update/{id}/{id_game}', 'AdminDashboar
 Route::post('/administratordashboard/topup/prosesupdate', 'AdminDashboard\TopUpController@prosesupdatetopupadmin')->name('prosesupdatetopupdashboard');
 
 
-Route::get('/', 'User\HomeController@index')->name('home');
+Route::get('/home', 'User\HomeController@index')->name('home');
 Route::get('/topupaov', 'User\HomeController@topupaov')->name('topupaov');
 Route::get('/topupff', 'User\HomeController@topupff')->name('topupff');
 Route::get('/tierbosteraov', 'User\HomeController@tierbosteraov')->name('tierbosteraov');
