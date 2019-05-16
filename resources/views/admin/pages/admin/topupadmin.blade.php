@@ -28,6 +28,8 @@
                                     <td>@php echo $isi['nama'] @endphp</td>
                                     @if($namagames == "aov")
                                         <td>@php echo $isi['list'] @endphp VOC</td>
+                                    @elseif($namagames == "FF")
+                                        <td>@php echo $isi['list'] @endphp Diamond</td>
                                     @endif
                                     <td>@php echo $isi['harga'] @endphp</td>
                                     <td>@php echo $isi['payment'] @endphp</td>
