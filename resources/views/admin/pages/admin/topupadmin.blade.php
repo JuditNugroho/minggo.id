@@ -40,6 +40,7 @@
                             @endforeach
                             </tbody>
                         </table>
+                        {{ $topup->links() }}
                     </div>
                     <a class="btn btn-primary" href="{{route('topupdashboard', $namagames)}}" role="button">Kembali</a>
                 </div>

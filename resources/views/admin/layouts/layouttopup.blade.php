@@ -31,9 +31,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./notifications.html">
-                                <i class="nc-icon nc-bell-55"></i>
-                                <p>Notifications</p>
+                            <a href="{{route('gamesdashboard')}}">
+                                <i class="nc-icon nc-controller-modern"></i>
+                                <p>Game</p>
                             </a>
                         </li>
                         <li>
@@ -42,8 +42,8 @@
                                 <p>User</p>
                             </a>
                         </li>
-                        <li class="active-pro">
-                            <a href="./upgrade.html">
+                        <li>
+                            <a href="{{route('tierboosterdashboard')}}">
                                 <i class="nc-icon nc-spaceship"></i>
                                 <p>Tier Booster</p>
                             </a>

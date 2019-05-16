@@ -21,15 +21,15 @@
                         @csrf
                         <div class="form-group">
                             <label for="nama">Nama</label>
-                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama topup">
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama topup" required>
                         </div>
                         <div class="form-group">
                             <label for="list">List</label>
-                            <input type="number" class="form-control" id="list" name="list" placeholder="Masukkan list topup (nominalnya saja) ">
+                            <input type="number" class="form-control" id="list" name="list" placeholder="Masukkan list topup (nominalnya saja) " required>
                         </div>
                         <div class="form-group">
                             <label for="harga">Harga</label>
-                            <input type="number" class="form-control" id="harga" name="harga" placeholder="Masukkan harga topup">
+                            <input type="number" class="form-control" id="harga" name="harga" placeholder="Masukkan harga topup" required>
                         </div>
                         <div class="form-group">
                             <label for="payment">Cara Pembayaran</label>
