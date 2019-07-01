@@ -42,13 +42,13 @@
                         <p>User</p>
                     </a>
                 </li>
-                <li  class="active">
+                <li>
                     <a href="{{route('tierboosterdashboard')}}">
                         <i class="nc-icon nc-spaceship"></i>
                         <p>Tier Booster</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="{{route('transaksitopupaov')}}">
                         <i class="nc-icon nc-diamond"></i>
                         <p>Transaksi Top Up AOV</p>
@@ -69,7 +69,7 @@
                             <span class="navbar-toggler-bar bar3"></span>
                         </button>
                     </div>
-                    <a class="navbar-brand" href="#pablo">Tier Booster || {{ config('app.name', 'Laravel') }}</a>
+                    <a class="navbar-brand" href="#pablo">Top - Up || {{ config('app.name', 'Laravel') }}</a>
                 </div>
             </div>
         </nav>

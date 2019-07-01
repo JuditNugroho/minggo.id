@@ -48,6 +48,12 @@
                         <p>Tier Booster</p>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('transaksitopupaov')}}">
+                        <i class="nc-icon nc-diamond"></i>
+                        <p>Transaksi Top Up AOV</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
