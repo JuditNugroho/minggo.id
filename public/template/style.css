@@ -326,7 +326,8 @@ img {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 85px; }
+  height: 85px;
+  background-color: #ffaa00;}
 .header-area .top-header-area .top-search-area {
   position: relative;
   z-index: 1; }
@@ -577,7 +578,8 @@ img {
 
 .games-area {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  background-color: #ffcc00;}
 .games-area .col-12:last-child .single-games-area:after {
   display: none; }
 
