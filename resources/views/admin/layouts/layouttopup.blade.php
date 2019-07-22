@@ -5,7 +5,7 @@
     </head>
     <body>
         <div class="wrapper ">
-            <div class="sidebar" data-color="white" data-active-color="danger">
+            <div class="sidebar" data-color="yellow" data-active-color="danger">
                 <div class="logo">
                     <a href="#" class="simple-text logo-mini">
                         <div class="logo-image-small">

@@ -97,7 +97,7 @@
                 <div class="row h-100 align-items-center">
                     <div class="col-12">
                         <!-- Copywrite Text -->
-                        <p class="copywrite-text" align="center" style="color: white;">
+                        <p class="copywrite-text" align="center" style="color: black;">
                             Copyright  &copy; by Minggo.id <script>document.write(new Date().getFullYear());</script> </a>
                         </p>
                     </div>

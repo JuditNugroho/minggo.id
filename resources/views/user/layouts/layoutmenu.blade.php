@@ -18,7 +18,7 @@
                 <div class="col-12 d-flex align-items-center justify-content-between">
                     <!-- Logo Area -->
                     <div class="logo">
-                        <a href="{{route('home')}}"><img src="/template/img/core-img/logo.png" alt=""></a>
+                        <a href="{{route('home')}}"><img src="/iconweb/fileminggo.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
-                    <p class="copywrite-text" align="center" style="color: white;">
+                    <p class="copywrite-text" align="center" style="color: black;">
                         Copyright  &copy; by Minggo.id <script>document.write(new Date().getFullYear());</script> </a>
                     </p>
                 </div>

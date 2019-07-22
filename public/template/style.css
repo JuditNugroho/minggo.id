@@ -145,7 +145,7 @@ img {
 
 /* :: 3.4.0 Preloader */
 .preloader {
-  background-color: #20d8da;
+  background-color: #ffcc00;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -159,7 +159,7 @@ img {
 .preloader .spinner div {
   width: 18px;
   height: 18px;
-  background-color: #fff;
+  background-color: #ffaa00;
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
@@ -276,7 +276,7 @@ img {
 
 /* :: 3.6.0 ScrollUp */
 #scrollUp {
-  background-color: #000000;
+  background-color: #ffaa00;
   border-radius: 0;
   bottom: 50px;
   color: #ffffff;
@@ -291,12 +291,12 @@ img {
   transition-duration: 500ms;
   box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.15); }
 #scrollUp:hover, #scrollUp:focus {
-  background-color: #20d8da;
-  color: #ffffff; }
+  background-color: #ffcc00;
+  color: #000; }
 
 /* :: 3.7.0 egames Button */
 .egames-btn {
-  background-color: #20d8da;
+  background-color: #ffffff;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
   position: relative;
@@ -304,7 +304,7 @@ img {
   display: inline-block;
   min-width: 160px;
   height: 50px;
-  color: #ffffff;
+  color: #ffaa00;
   border-radius: 0;
   padding: 0 30px;
   font-size: 14px;
@@ -433,9 +433,10 @@ img {
   text-transform: capitalize;
   font-size: 16px;
   padding: 0 10px;
-  color: #545454; }
+  color: #545454;
+  background: #ffaa00}
 .header-area .egames-main-menu .classy-navbar .classynav ul li a:hover, .header-area .egames-main-menu .classy-navbar .classynav ul li a:focus {
-  color: #20d8da; }
+  color: #f2ff00; }
 .header-area .egames-main-menu .classy-navbar .classynav > ul > li:first-child a {
   padding-left: 0; }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -606,8 +607,7 @@ img {
   position: relative;
   z-index: 1;
   background-color: #0c0c0c;
-  border-top: 1px solid #fff;
-  background-image: url(img/core-img/pattern.png);
+  border-top: 1px solid #ffaa00;
   background-repeat: repeat; }
 .footer-area .single-footer-widget {
   position: relative;
@@ -634,13 +634,13 @@ img {
 .footer-area .copywrite-content {
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #ffaa00;
   width: 100%;
   padding: 15px 0; }
 .footer-area .copywrite-content .copywrite-text {
   font-size: 12px;
   margin-bottom: 0;
-  color: #666666;
+  color: #ffaa00;
   font-weight: 400; }
 @media only screen and (max-width: 767px) {
   .footer-area .copywrite-content .copywrite-text {
