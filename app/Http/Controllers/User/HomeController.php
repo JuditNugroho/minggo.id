@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\TierBooster;
 use App\TopUp;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -35,7 +36,8 @@ class HomeController extends Controller
         return view('user/topupff',compact(['games']));
     }
     public function  tierbosteraov(Request $request){
-        return view('user/pages/tierboosteraov');
+        return view('user/pages/tierboosteraov')
+            ->with('tierboosters',TierBooster::all());
     }
     public function  tierbosterff(Request $request){
         $games = \App\Games::paginate(10);

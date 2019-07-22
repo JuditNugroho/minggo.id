@@ -17,7 +17,7 @@
                 <div class="row h-100 align-items-center">
                     <div class="col-12 d-flex align-items-center justify-content-between">
                         <div class="logo">
-                            <a href="{{route('home')}}"><img src="/template/img/core-img/logo.png" alt=""></a>
+                            <a href="{{route('home')}}"><img src="/iconweb/fileminggo.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,6 @@
     <div class="games-area section-padding-100-0">
         @yield('content')
     </div>
-
     <footer class="footer-area">
         <div class="copywrite-content">
             <div class="container h-100">

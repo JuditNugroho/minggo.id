@@ -12,7 +12,6 @@ class TopUpController extends Controller
         $games = \App\Games::paginate(10);
         return view('admin/pages/topup',compact(['games']));
     }
-    //Controller Super Admin
     public function lihattopupadmin(Request $request,$idgames){
         $namagames= $idgames;
         $topup = \App\TopUp::where('id_games', $idgames)->orderBy('list', 'asc')->orderBy('payment', 'desc')->paginate(10);

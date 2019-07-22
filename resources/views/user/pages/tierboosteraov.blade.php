@@ -14,9 +14,6 @@
                 </ul>
                 @if(session()->has('success'))
                     <div class="alert alert-success alert-icon alert-icon-border alert-dismissible" role="alert">
-                        <!-- <div class="icon">
-                            <span class="mdi mdi-check"></span>
-                        </div> -->
                         <div class="message">
                             <span class="mdi mdi-check"></span>
                             <button class="close" data-dismiss="alert">
@@ -31,37 +28,22 @@
                         <div class="row">
                                 <div class="col-md-6">
                                     <h4>Rank Saat Ini</h4>
-                                    <img src="{{asset('template/img/core-img/diamond.jpg')}}" width="50%"><br>
-                                    <label>Rank Saat Ini</label><br>
-                                    <select >
-                                        <option >Warrior</option>
+                                    <select name="rankawal" id="rankawal">
+                                        @foreach($tierboosters as $tierbooster)
+                                        <option value="{{ $tierbooster->id }}">{{ $tierbooster->nama }}</option>
+                                        @endforeach
                                     </select><br>
-                                    <label>Tier Saat Ini</label><br>
-                                    <select >
-                                        <option >Warrior</option>
-                                    </select>
-                                    <br>
-                                    <label>Bintang Saat Ini</label><br>
-                                    <select >
-                                        <option >Warrior</option>
-                                    </select>
+                                    <br><img src="{{asset('template/img/core-img/diamond.jpg')}}" width="50%"><br>
                                 </div>
                                 <div class="col-md-6">
                                     <h4>Rank Diinginkan</h4>
-                                    <img src="{{asset('template/img/core-img/diamond.jpg')}}" width="50%"><br>
-                                    <label>Rank Saat Ini</label><br>
-                                    <select >
-                                        <option >Warrior</option>
+                                    <select name="rankakhir" id="rankakhir">
+                                        @foreach($tierboosters as $tierbooster)
+                                            <option value="{{ $tierbooster->id }}">{{ $tierbooster->nama }}</option>
+                                        @endforeach
                                     </select><br>
-                                    <label>Tier Saat Ini</label><br>
-                                    <select >
-                                        <option >Warrior</option>
-                                    </select>
                                     <br>
-                                    <label>Bintang Saat Ini</label><br>
-                                    <select >
-                                        <option >Warrior</option>
-                                    </select>
+                                    <img src="{{asset('template/img/core-img/diamond.jpg')}}" width="50%"><br>
                                 </div>
                         </div><br><br><br>
                     </div>
@@ -71,6 +53,13 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <h4>Total Harga</h4>
+        </div>
+        <div class="row">
+            <input type="text" name="totalharga" id="totalharga"  disabled>
+        </div>
+        <br>
     </div>
     <script>
         $(document).ready(function() {
@@ -79,5 +68,12 @@
                 trigger: "hover"
             });
         })
+        $('#rankawal').on('change', function (rankawal) {
+            var rankakhir = document.getElementById("rankakhir");
+            var nilairankakhir = rankakhir.options[rankakhir.selectedIndex].value;
+            $.get('/hitung/aov/'+rankawal.target.value+'/'+nilairankakhir+'/aov/', function (data) {
+                document.getElementById('totalharga').value =  data;
+            });
+        });
     </script>
 @endsection

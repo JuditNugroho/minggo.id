@@ -26,6 +26,7 @@ Route::get('/administratordashboard/topup/list/{id}', 'AdminDashboard\TopUpContr
 Route::get('/administratordashboard/topup/insert/{id}', 'AdminDashboard\TopUpController@inserttopupadmin')->name('inserttopupdashboard');
 Route::get('/administratordashboard/topup/update/{id}/{id_game}', 'AdminDashboard\TopUpController@updatetopupadmin')->name('updatetopupdashboard');
 Route::post('/administratordashboard/topup/prosesupdate', 'AdminDashboard\TopUpController@prosesupdatetopupadmin')->name('prosesupdatetopupdashboard');
+Route::post('/administratordashboard/topup/delete/{id}/{id_game}', 'AdminDashboard\TopUpController@deletetopupadmin')->name('deletetopupdashboard');
 //Game Controler
 Route::get('/administratordashboard/games', 'AdminDashboard\GameController@index')->name('gamesdashboard');
 Route::get('/administratordashboard/games/insert', 'AdminDashboard\GameController@insert')->name('insertgamesdashboard');

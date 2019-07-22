@@ -31,6 +31,10 @@ class KonfirmasiPembayaran extends Controller
        return redirect()->back()->with('success','Proses pembayaran segera diproses');
    }
    public function lhtfotoaov(Request $request,$foto){
-        return response()->download(storage_path('app/public/transferaov/'.$foto));
+       if (file_exists(storage_path('app/public/transferaov/'.$foto))){
+           return response()->file(storage_path('app/public/transferaov/'.$foto));
+       }else{
+           return redirect()->back()->withErrors('Konfirmasi pembayaran tidak tersedia');
+       }
    }
 }

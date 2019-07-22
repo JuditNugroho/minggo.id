@@ -20,16 +20,13 @@ class HitungAOV extends Controller
                 $tier = \App\TierBooster::where('rank', '=', $i)->where('id_games', '=', $id_games)->first();
                 $biaya += $tier['harga'];
             }
-            //  echo $biaya;
         } else if ($rankawal == 0) {
             $biaya = $idjadwalawal['biaya'];
             for ($i = $rankawal++; $i < $rankakhir; $i++) {
                 $tier = \App\TierBooster::where('rank', '=', $i)->where('id_games', '=', $id_games)->first();
                 $biaya += $tier['harga'];
             }
-            //    echo $biaya;
         }
-        $tier = \App\TierBooster::where('rank', '>', $rankawal)->orderBy('rank', 'ASC')->get();
-        return Response::json($tier);
+        return Response::json($biaya);
     }
 }
