@@ -29,4 +29,9 @@ class HitungAOV extends Controller
         }
         return Response::json($biaya);
     }
+    public function validasirankakhir(Request $request, $id){
+        $rankawal = \App\TierBooster::where('id',$id)->first();
+        $rankakhir = \App\TierBooster::where('rank','>',$rankawal->rank)->orderBy('rank','ASC')->get();
+        return Response::json($rankakhir);
+    }
 }

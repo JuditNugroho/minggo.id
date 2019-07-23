@@ -29,6 +29,7 @@
                                 <div class="col-md-6">
                                     <h4>Rank Saat Ini</h4>
                                     <select name="rankawal" id="rankawal">
+                                        <option hidden value="salah">-- Pilih Salah Satu --</option>
                                         @foreach($tierboosters as $tierbooster)
                                         <option value="{{ $tierbooster->id }}">{{ $tierbooster->nama }}</option>
                                         @endforeach
@@ -38,9 +39,7 @@
                                 <div class="col-md-6">
                                     <h4>Rank Diinginkan</h4>
                                     <select name="rankakhir" id="rankakhir">
-                                        @foreach($tierboosters as $tierbooster)
-                                            <option value="{{ $tierbooster->id }}">{{ $tierbooster->nama }}</option>
-                                        @endforeach
+                                        <option hidden value="salah">-- Pilih Salah Satu --</option>
                                     </select><br>
                                     <br>
                                     <img src="{{asset('template/img/core-img/diamond.jpg')}}" width="50%"><br>
@@ -69,10 +68,20 @@
             });
         })
         $('#rankawal').on('change', function (rankawal) {
-            var rankakhir = document.getElementById("rankakhir");
-            var nilairankakhir = rankakhir.options[rankakhir.selectedIndex].value;
-            $.get('/hitung/aov/'+rankawal.target.value+'/'+nilairankakhir+'/aov/', function (data) {
-                document.getElementById('totalharga').value =  data;
+            var validasirankawal = rankawal.target.value;
+            var validrankakhir = $('#rankakhir');
+            validrankakhir.empty();
+            $.get('/validasirankakhir/' + validasirankawal, function (data) {
+                validrankakhir.append('<option value="salah" hidden>Pilih Salah Satu </option>');
+                $.each(data, function (index,rank) {
+                    validrankakhir.append('<option value=' + rank.id + '>' + rank.nama + '</option>');
+                });
+                $('#rankakhir').on('change', function (rankakhir) {
+                    nilairankakhir = rankakhir.target.value;
+                    $.get('/hitung/aov/'+validasirankawal+'/'+nilairankakhir+'/aov/', function (data) {
+                        document.getElementById('totalharga').value =  data;
+                    });
+                });
             });
         });
     </script>
