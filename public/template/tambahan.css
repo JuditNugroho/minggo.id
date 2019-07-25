@@ -11,11 +11,32 @@
     -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
     -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
 }
-.form-style-10 .inner-wrap{
+.form-style-10 .inner-wrap {
     padding: 30px;
     background: #ffaa00;
     border-radius: 6px;
     margin-bottom: 15px;
+}
+.form-style-11{
+    max-width:300px;
+    padding:4px;
+    margin:4px auto;
+    background: #ffaa00;
+    border-radius: 40px;
+    border: 1px solid;
+    -webkit-border-radius:10px;
+    -moz-border-radius: 1px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+}
+.form-style-11 .inner-wrap{
+    padding: 1px;
+    background: #ffaa00;
+    border-radius: 1px;
+    margin-bottom: 1px;
+    display: grid;
+    grid-gap: 5px;
 }
 .form-style-10 h1{
     background: #1900ff;
