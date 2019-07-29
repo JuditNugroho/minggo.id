@@ -2,24 +2,26 @@
 
 namespace App\Http\Controllers\AdminDashboard;
 
-use Illuminate\Http\Request;
+use App\Games;
 use App\Http\Controllers\Controller;
+use App\TierBoosterAov;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class TierBooster extends Controller
 {
     public function  index(Request $request){
-        $games = \App\Games::paginate(10);
+        $games = Games::paginate(10);
         return view('admin/pages/tierbooster',compact(['games']));
     }
     public function lihattieradmin(Request $request,$idgames){
         $namagames= $idgames;
-        $tierbooster = \App\TierBooster::where('id_games', $idgames)->orderBy('rank', 'asc')->orderBy('tier','desc')->paginate(10);
+        $tierbooster = TierBoosterAov::where('id_games', $idgames)->orderBy('rank', 'asc')->orderBy('tier','desc')->paginate(10);
         return view('admin/pages/admin/tierboosteradmin',compact(['tierbooster','namagames']));
     }
     public function deletetieradmin(Request $request,$id, $idgames){
         $namagames= $idgames;
-        $tierbooster = \App\TierBooster::find($id);
+        $tierbooster = TierBoosterAov::find($id);
         if(isset($tierbooster)){
             $tierbooster->delete();
         }
@@ -27,7 +29,7 @@ class TierBooster extends Controller
     }
     public function inserttieradmin(Request $request, $idgames){
         $namagames= $idgames;
-        $games = \App\Games::where('id', $idgames)->get();
+        $games = Games::where('id', $idgames)->get();
         return view('admin/pages/admin/tierbooster/insert',compact(['namagames','games']));
     }
     public function prosesinserttieradmin(Request $request){
@@ -38,7 +40,7 @@ class TierBooster extends Controller
             'harga' => 'required',
             'id_games' => 'required'
         ]);
-        $tierbooster = new \App\TierBooster();
+        $tierbooster = new TierBoosterAov();
         $tierbooster->nama = $request->nama;
         $tierbooster->rank = $request->rank;
         $tierbooster->tier = $request->tier;
@@ -51,7 +53,7 @@ class TierBooster extends Controller
         $namagames= $idgames;
         $tierbooster = DB::table('tierbooster')->where('id', $id)->first();
         if (isset($tierbooster)){
-            $games = \App\Games::where('id', $idgames)->get();
+            $games = Games::where('id', $idgames)->get();
             return view('admin/pages/admin/tierbooster/update',compact(['tierbooster','namagames','games']));
         }else{
             return redirect()->route('tierboosteradmindashboard', $namagames);
