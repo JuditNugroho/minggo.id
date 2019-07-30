@@ -1,5 +1,5 @@
 @extends('user.layouts.layoutmenu')
-@section('title', 'Tier Booster AOV')
+@section('title', 'Tier Booster FF')
 @section('content')
     <div class="container">
         <div class="row">
@@ -71,14 +71,14 @@
             var validasirankawal = rankawal.target.value;
             var validrankakhir = $('#rankakhir');
             validrankakhir.empty();
-            $.get('/validasirankakhir/' + validasirankawal, function (data) {
+            $.get('/validasirankakhir/ff/' + validasirankawal, function (data) {
                 validrankakhir.append('<option value="salah" hidden>Pilih Salah Satu </option>');
                 $.each(data, function (index,rank) {
                     validrankakhir.append('<option value=' + rank.id + '>' + rank.nama + '</option>');
                 });
                 $('#rankakhir').on('change', function (rankakhir) {
                     nilairankakhir = rankakhir.target.value;
-                    $.get('/hitung/aov/'+validasirankawal+'/'+nilairankakhir+'/aov/', function (data) {
+                    $.get('/hitung/ff/'+validasirankawal+'/'+nilairankakhir+'/aov/', function (data) {
                         document.getElementById('totalharga').value =  data;
                     });
                 });

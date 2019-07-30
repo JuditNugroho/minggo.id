@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\User;
 
-use App\TierBooster;
+use App\Games;
+use App\Http\Controllers\Controller;
+use App\TierBoosterAov;
+use App\TierBoosterFF;
 use App\TopUp;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
@@ -32,15 +34,15 @@ class HomeController extends Controller
             ->with('waktusekarang',$waktu1jam);
     }
     public function  topupff(Request $request){
-        $games = \App\Games::paginate(10);
+        $games = Games::paginate(10);
         return view('user/topupff',compact(['games']));
     }
     public function  tierbosteraov(Request $request){
         return view('user/pages/tierboosteraov')
-            ->with('tierboosters',TierBooster::all());
+            ->with('tierboosters',TierBoosterAov::all());
     }
     public function  tierbosterff(Request $request){
-        $games = \App\Games::paginate(10);
-        return view('user/tierbosterff',compact(['games']));
+        return view('user/pages/tierboosterff')
+            ->with('tierboosters',TierBoosterFF::all());
     }
 }

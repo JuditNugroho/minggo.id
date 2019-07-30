@@ -44,7 +44,9 @@ Route::post('/administratordashboard/tierbooster/prosesupdate', 'AdminDashboard\
 Route::get('/administratordashboard/tierbooster/delete/{id}/{id_games}', 'AdminDashboard\TierBooster@deletetieradmin')->name('deletetierdashboard');
 //Hitung AOV
 Route::get('/hitung/aov/{idawal}/{idakhir}/{id_games}', 'AdminDashboard\HitungAOV@index')->name('hitungaov');
+Route::get('/hitung/ff/{idawal}/{idakhir}/{id_games}', 'AdminDashboard\HitungAOV@index')->name('hitungff');
 Route::get('/validasirankakhir/{id}', 'AdminDashboard\HitungAOV@validasirankakhir')->name('validasirankakhir');
+Route::get('/validasirankakhir/ff/{id}', 'AdminDashboard\HitungFF@validasirankakhir')->name('validasirankakhir');
 
 Route::get('/', 'User\HomeController@index')->name('home');
 Route::get('/topupaov', 'User\HomeController@topupaov')->name('topupaov');

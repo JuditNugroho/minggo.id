@@ -70,7 +70,7 @@ class TierBooster extends Controller
         ]);
         $tierbooster = DB::table('tierbooster')->where('id', $request->id)->first();
         if(isset($tierbooster)){
-            $tierbooster = \App\TierBooster::where('id', $request->id)->first();
+            $tierbooster = TierBoosterAov::where('id', $request->id)->first();
             $tierbooster->nama = $request->nama;
             $tierbooster->rank = $request->rank;
             $tierbooster->tier = $request->tier;
