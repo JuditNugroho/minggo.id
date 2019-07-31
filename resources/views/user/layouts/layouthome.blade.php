@@ -57,37 +57,6 @@
             </div>
         </div>
     </header>
-    <div class="hero-area">
-        <div class="hero-post-slides owl-carousel">
-            <div class="single-slide bg-img bg-overlay" style="background-image: url(/template/img/bg-img/aov.jpg);">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-12 col-lg-9">
-                            <div class="blog-content" data-animation="fadeInUp" data-delay="100ms">
-                                <h2 data-animation="fadeInUp" data-delay="400ms">Arena Of Valor</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">Mobile Arena yang sekarang dikenal AOV ini merupakan salah satu game MOBA (Multiplayer Online Battle Arena) yang saat ini menjadi populer diantara para gamer Indonesia. Bahkan game AOV telah diunduh lebih dari 1 jutaan dan menjadi game MOBA nomor satu untuk tingkat Asia.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="single-slide bg-img bg-overlay" style="background-image: url(/template/img/bg-img/FF.jpg);">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-12 col-lg-9">
-                            <div class="blog-content" data-animation="fadeInUp" data-delay="100ms">
-                                <h2 data-animation="fadeInUp" data-delay="400ms">FreeFire</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">
-                                    Free Fire adalah game atau permainan peperangan beraliran Battle Royale dan TPS (Third Person Shooter) yang mempertemukan 50 sampai 52 pemain di dalam satu map yang luas, dimana setiap pemain diharuskan agar saling membunuh dan menjadi satu-satunya orang yang bisa bertahan hidup untuk menjadi pemenang.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="games-area section-padding-100-0">
         @yield('content')
     </div>

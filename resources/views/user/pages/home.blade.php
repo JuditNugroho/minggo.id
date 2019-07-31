@@ -2,16 +2,18 @@
 @section('title', 'Halaman Utama')
 @section('content')
 
-    <div class="col-md-6">
     <h2 align="center">Top Up</h2>
-            <div class="form-style-11">
-                <div class="inner-wrap">
-                    <div><a href="{{route('topupaov')}}"><img src="/template/img/bg-img/aov.jpg" alt=""></a></div>
-
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-style-11"><div class="inner-wrap">
+                    <div><a href="{{route('topupaov')}}"><img src="/template/img/bg-img/FF.jpg" alt=""></a></div>
                 </div>
             </div>
-        <div class="form-style-11"><div class="inner-wrap">
-                <div><a href="{{route('topupaov')}}"><img src="/template/img/bg-img/FF.jpg" alt=""></a></div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-style-11"><div class="inner-wrap">
+                    <div><a href="{{route('topupaov')}}"><img src="/template/img/bg-img/FF.jpg" alt=""></a></div>
+                </div>
             </div>
         </div>
     </div>
