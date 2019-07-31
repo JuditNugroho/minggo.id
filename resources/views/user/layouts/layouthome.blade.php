@@ -47,6 +47,7 @@
                                         <ul class="dropdown">
                                             <li><a href="{{route('tierbosteraov')}}">Arena Of Valor</a></li>
                                             <li><a href="{{route('tierbosterff')}}">Free Fire</a></li>
+                                            <li><a href="{{route('tierbosterpubgm')}}">PUBG Mobile</a></li>
                                         </ul>
                                     </li>
                                 </ul>

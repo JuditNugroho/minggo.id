@@ -6,6 +6,7 @@ use App\Games;
 use App\Http\Controllers\Controller;
 use App\TierBoosterAov;
 use App\TierBoosterFF;
+use App\TierBoosterPUBGM;
 use App\TopUp;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -56,5 +57,9 @@ class HomeController extends Controller
     public function  tierbosterff(Request $request){
         return view('user/pages/tierboosterff')
             ->with('tierboosters',TierBoosterFF::all());
+    }
+    public function  tierbosterpubgm(Request $request){
+        return view('user/pages/tierboosterpubgm')
+            ->with('tierboosters',TierBoosterPUBGM::all());
     }
 }

@@ -56,6 +56,7 @@ Route::get('/prosestopupaov', 'User\HomeController@prosestopupaov')->name('prose
 Route::get('/topupff', 'User\HomeController@topupff')->name('topupff');
 Route::get('/tierbosteraov', 'User\HomeController@tierbosteraov')->name('tierbosteraov');
 Route::get('/tierbosterff', 'User\HomeController@tierbosterff')->name('tierbosterff');
+Route::get('/tierbosterpubgm', 'User\HomeController@tierbosterpubgm')->name('tierbosterpubgm');
 
 //Konfirmasi Pembayaran
 Route::post('/topupaov/konfirmasipembayaran', 'User\KonfirmasiPembayaran@konfirmasipembayaranaov')->name('konfirmasipembayaranaov');

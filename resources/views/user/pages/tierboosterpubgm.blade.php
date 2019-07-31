@@ -1,5 +1,5 @@
 @extends('user.layouts.layoutmenu')
-@section('title', 'Tier Booster AOV')
+@section('title', 'Tier Booster PUBGM')
 @section('content')
     <div class="container">
         <div class="row">
@@ -34,7 +34,7 @@
                                         <option value="{{ $tierbooster->id }}">{{ $tierbooster->nama }}</option>
                                     @endforeach
                                 </select><br>
-                                <br><img src="{{asset('template/img/core-img/diamond.jpg')}}" id="tierawal" width="50%"><br>
+                                <br><img src="{{asset('template/img/core-img/diamond.jpg')}}" width="50%"><br>
                             </div>
                             <div class="col-md-6">
                                 <h4>Rank Diinginkan</h4>
@@ -42,7 +42,7 @@
                                     <option hidden value="salah">-- Pilih Salah Satu --</option>
                                 </select><br>
                                 <br>
-                                <img src="{{asset('template/img/core-img/diamond.jpg')}}" id="tierakhir" width="50%"><br>
+                                <img src="{{asset('template/img/core-img/diamond.jpg')}}" width="50%"><br>
                             </div>
                         </div><br><br><br>
                     </div>
@@ -71,17 +71,15 @@
             var validasirankawal = rankawal.target.value;
             var validrankakhir = $('#rankakhir');
             validrankakhir.empty();
-            $.get('/validasirankakhir/' + validasirankawal, function (data) {
+            $.get('/validasirankakhir/ff/' + validasirankawal, function (data) {
                 validrankakhir.append('<option value="salah" hidden>Pilih Salah Satu </option>');
                 $.each(data, function (index,rank) {
                     validrankakhir.append('<option value=' + rank.id + '>' + rank.nama + '</option>');
                 });
                 $('#rankakhir').on('change', function (rankakhir) {
                     nilairankakhir = rankakhir.target.value;
-                    $.get('/hitung/aov/'+validasirankawal+'/'+nilairankakhir+'/aov/', function (data) {
-                        document.getElementById('totalharga').value =  data.biaya;
-                        document.getElementById("tierawal").src = '{{ asset('aov') }}' + '/' + data.gambarawal;
-                        document.getElementById("tierakhir").src = '{{ asset('aov') }}' + '/' + data.gambarakhir;
+                    $.get('/hitung/ff/'+validasirankawal+'/'+nilairankakhir+'/aov/', function (data) {
+                        document.getElementById('totalharga').value =  data;
                     });
                 });
             });
