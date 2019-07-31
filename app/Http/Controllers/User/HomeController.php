@@ -19,11 +19,21 @@ class HomeController extends Controller
         $topup = TopUp::where('id_games','aov')->orderBy('list','asc')->get();
         return view('user/pages/topupaov')->with('topup',$topup);
     }
+    public function  konfaov(Request $request){
+        $topup = TopUp::where('id_games','aov')->orderBy('list','asc')->get();
+        return view('user/pages/konfaov')->with('topup',$topup);
+    }
     public function  prosestopupaov(Request $request){
         $waktusekarang = Carbon::now();
         $hargavalidasi = $waktusekarang->format('d');
         $hargarandom = rand(1,9);
         $hargasekarang = $request->input('hargaview');
+        $cara_pembayaran = $request->input('cara_pembayaran');
+        $id = $request->input('id_player');
+        $nama = $request->input('namatopup');
+        if ($cara_pembayaran == "pulsa"){
+            $hargasekarang = ceil((int) $hargasekarang * 1.2);
+        }
         $hargasekarangbaru = substr($hargasekarang,0,-3);
         $hargavalidasibaru = $hargavalidasi.$hargarandom;
         $hargabaru =  number_format(($hargasekarangbaru.$hargavalidasi.$hargarandom),0,".",".");
@@ -31,6 +41,8 @@ class HomeController extends Controller
         return view('user/pages/prosestopupaov')->with('harga',$hargabaru)
             ->with('cara_pembayaran',$request->input('cara_pembayaran'))
             ->with('hargavalidasibaru',$hargavalidasibaru)
+            ->with('id',$id)
+            ->with('nama',$nama)
             ->with('waktusekarang',$waktu1jam);
     }
     public function  topupff(Request $request){

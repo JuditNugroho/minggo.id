@@ -47,9 +47,11 @@ Route::get('/hitung/aov/{idawal}/{idakhir}/{id_games}', 'AdminDashboard\HitungAO
 Route::get('/hitung/ff/{idawal}/{idakhir}/{id_games}', 'AdminDashboard\HitungAOV@index')->name('hitungff');
 Route::get('/validasirankakhir/{id}', 'AdminDashboard\HitungAOV@validasirankakhir')->name('validasirankakhir');
 Route::get('/validasirankakhir/ff/{id}', 'AdminDashboard\HitungFF@validasirankakhir')->name('validasirankakhir');
+Route::get('/hitungharga/aov/{id}', 'User\HitungHargaController@index')->name('hitunghargaaov');
 
 Route::get('/', 'User\HomeController@index')->name('home');
 Route::get('/topupaov', 'User\HomeController@topupaov')->name('topupaov');
+Route::get('/konfaov', 'User\HomeController@konfaov')->name('konfaov');
 Route::get('/prosestopupaov', 'User\HomeController@prosestopupaov')->name('prosestopupaov');
 Route::get('/topupff', 'User\HomeController@topupff')->name('topupff');
 Route::get('/tierbosteraov', 'User\HomeController@tierbosteraov')->name('tierbosteraov');

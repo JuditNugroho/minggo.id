@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\TierBoosterAov;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
+use stdClass;
 
 class HitungAOV extends Controller
 {
@@ -28,7 +29,11 @@ class HitungAOV extends Controller
                 $biaya += $tier['harga'];
             }
         }
-        return Response::json($biaya);
+        $aov =new stdClass();
+        $aov->gambarawal = $idjadwalawal['gambar'];
+        $aov->gambarakhir = $idjadwalakhir['gambar'];
+        $aov->biaya = $biaya;
+        return Response::json($aov);
     }
     public function validasirankakhir(Request $request, $id){
         $rankawal = TierBoosterAov::where('id',$id)->first();

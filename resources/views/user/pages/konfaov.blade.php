@@ -6,10 +6,10 @@
             <div class="col-md-12">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="pembelian-tab" data-toggle="pill" href="#pembelian" role="tab" aria-controls="pembelian" aria-selected="true">Pembelian</a>
+                        <a class="nav-link" id="pembelian-tab" data-toggle="pill" href="#pembelian" role="tab" aria-controls="pembelian" aria-selected="true">Pembelian</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="konfirmasipembelian-tab" data-toggle="pill" href="#konfirmasipembelian" role="tab" aria-controls="pills-profile" aria-selected="false">Konfirmasi Transfer</a>
+                        <a class="nav-link active" id="konfirmasipembelian-tab" data-toggle="pill" href="#konfirmasipembelian" role="tab" aria-controls="pills-profile" aria-selected="false">Konfirmasi Transfer</a>
                     </li>
                 </ul>
                 @if(session()->has('success'))
@@ -27,7 +27,7 @@
                     </div>
                 @endif
                 <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pembelian" role="tabpanel" aria-labelledby="pembelian-tab">
+                    <div class="tab-pane fade" id="pembelian" role="tabpanel" aria-labelledby="pembelian-tab">
                         <br>
                         <div class="col-md-12">
                             <div class="form-style-10">
@@ -92,7 +92,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="konfirmasipembelian" role="tabpanel" aria-labelledby="konfirmasipembelian-tab">
+                    <div class="tab-pane fade show active" id="konfirmasipembelian" role="tabpanel" aria-labelledby="konfirmasipembelian-tab">
                         <br>
                         <div class="form-style-10">
                             <h1>Konfirmasi Pembayaran<span>Halaman Konfirmasi Pembayaran AOV</span></h1>
